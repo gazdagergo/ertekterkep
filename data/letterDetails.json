@@ -1,0 +1,14 @@
+[
+  {
+    "id": "Z",
+    "name": "Bősze Balázs",
+    "amount": 5000,
+    "trackImg": "/z-letter.png"
+  },
+  {
+    "id": "H",
+    "name": "Czuczor Gábor",
+    "amount": 5000,
+    "trackImg": null
+  }
+]

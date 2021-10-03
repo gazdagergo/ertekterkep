@@ -20,3 +20,4 @@ export const Z_COORDS = [
 
 export const LETTER_CLICK = 'LETTER_CLICK'
 export const MAP_CLICK = 'MAP_CLICK'
+export const DRAWER_CLOSE = 'DRAWER_CLOSE'

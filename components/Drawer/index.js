@@ -9,6 +9,8 @@ const Wrap = styled.div`
   height: 100vh;
   top:0;
   background: white;
+  overflow-x: hidden;
+  overflow-y: scroll;
   box-shadow: -5px 0 4px #55555555;
   ${({ $isVisible }) => $isVisible ? `
     max-width: 400px;
@@ -17,10 +19,36 @@ const Wrap = styled.div`
   `}
 `
 
-const Drawer = ({ isVisible, children }) => {
+const DrawerHeader = styled.div`
+  width: 100%;
+  height: 30px;
+  display: flex;
+  align-items: center;
+`
+
+const Close = styled.div`
+  &:before {
+    content: '✕';
+    font-size: 18px;
+    color: #444;
+    cursor: pointer;
+    padding: 6px;
+  }
+`
+
+const DrawerBody = styled.div`
+  padding: 10px;
+`
+
+const Drawer = ({ isVisible, children, onClose }) => {
   return (
     <Wrap $isVisible={isVisible}>
-      {children}
+      <DrawerHeader>
+        <Close onClick={onClose} />
+      </DrawerHeader>
+      <DrawerBody>
+        {children}
+      </DrawerBody>
     </Wrap>
   )
 }

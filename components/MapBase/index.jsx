@@ -9,8 +9,8 @@ const containerStyle = {
 }
 
 const center = {
-  lat: 47.5224897,
-  lng: 19.0971414,
+  lat: 47.50,
+  lng: 19.12
 }
 
 const options = {
@@ -42,7 +42,7 @@ const MapBase = ({ onClick }) => {
           position={center}
         /> */}
         <Polyline
-          onMouseOut={e => console.log(e)}
+          onClick={() => onClick({ type: LETTER_CLICK, payload: 'H' })}
           path={toPoly(H_COORDS)}
           options={options}
         />          
