@@ -24,6 +24,9 @@ const DrawerHeader = styled.div`
   height: 30px;
   display: flex;
   align-items: center;
+  position: fixed;
+  top: 0;
+  background: white;
 `
 
 const Close = styled.div`
@@ -37,7 +40,7 @@ const Close = styled.div`
 `
 
 const DrawerBody = styled.div`
-  padding: 10px;
+  padding: 20px 10px;
 `
 
 const Drawer = ({ isVisible, children, onClose }) => {
